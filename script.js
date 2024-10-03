@@ -18,3 +18,11 @@ for (let i = 0; i < btnOpenModal.length; i++) {
 }
 
 btnCloseModal.addEventListener("click", closeModal);
+// Add the key for closing the modal windows 
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    if (!modal.classList.contains("hidden")) {
+      closeModal();
+    }
+  }
+});
